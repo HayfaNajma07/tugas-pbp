@@ -1,12 +1,15 @@
 # Tugas 2 PBP - Nomor 5
+**Nama   :** Hayfa Najma
 
-Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+**NPM    :** 2106653754
+
+**Kelas  :** PBP-F
 
 ## Bagan
 
 **Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;**
 
-![Bagan Tugas 2 PBP](bagan tugas 2 pbp.jpg)
+![bagan tugas 2 pbp](https://user-images.githubusercontent.com/92681187/189669134-9b9ac2db-3ae9-4d5a-864a-43ceb58ffa25.jpg)
 
 ## Virtual Environment
 
