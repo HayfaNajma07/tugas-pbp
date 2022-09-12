@@ -8,7 +8,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 **Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;**
 
-![Untitled - Frame 1](https://user-images.githubusercontent.com/92681187/189655323-1d2b8d75-c2c3-4938-ad97-e4b7195f1f69.jpg)
+![Bagan Tugas 2 PBP](bagan tugas 2 pbp.jpg)
 
 ## Virtual Environment
 
@@ -24,7 +24,7 @@ Selanjutnya, kita juga dapat membuat aplikasi web berbasis Django tanpa mengguna
 
 **Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.**
 
-Sebelum mengimplementasikan poin 1 - 4, saya terlebih dahulu membuka GitHub repositori templat kode, lalu klik tombol "**Use this template**" untuk membuat salinan repositori ke dalam akun GitHub saya. Lalu, saya membuka laman GitHub repositroi yang dibuat dari templat dan saya melakukan perintah `git clone` untuk menyalin repositorinya ke suatu lokasi di dalam sistem berkas (_filesystem_) komputer saya.
+Sebelum mengimplementasikan poin 1 - 4, saya terlebih dahulu membuka GitHub repositori templat kode, lalu klik tombol "**Use this template**" untuk membuat salinan repositori ke dalam akun GitHub saya. Lalu, saya membuka laman GitHub repositori yang dibuat dari templat dan saya melakukan perintah `git clone` untuk menyalin repositorinya ke suatu lokasi di dalam sistem berkas (_filesystem_) komputer saya.
 
 Kemudian, cara saya mengimplementasikan poin 1 sampai 4 dengan seperti ini:
 
