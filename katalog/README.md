@@ -6,7 +6,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 **Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;**
 
-![Bagan Tugas 2 PBP](bagan tugas 2 pbp.jpg)
+![bagan tugas 2 pbp](https://user-images.githubusercontent.com/92681187/189669134-9b9ac2db-3ae9-4d5a-864a-43ceb58ffa25.jpg)
 
 ## Virtual Environment
 
