@@ -1,6 +1,7 @@
 # Tugas 2 PBP - Nomor 5
-
-Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+**Nama   :** Hayfa Najma
+**NPM    :** 2106653754
+**Kelas  :** PBP-F
 
 ## Bagan
 
