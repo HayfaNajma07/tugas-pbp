@@ -6,7 +6,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 **Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;**
 
-![Bagan Tugas 2 PBP](bagan tugas 2 pbp.jpg)
+![bagan tugas 2 pbp](https://user-images.githubusercontent.com/92681187 189669134-9b9ac2db-3ae9-4d5a-864a-43ceb58ffa25.jpg)
 
 ## Virtual Environment
 
@@ -46,7 +46,7 @@ Kemudian, cara saya mengimplementasikan poin 1 sampai 4 dengan seperti ini:
       return render(request, "katalog.html", context)
    ```
 
-Potongan kode di atas berfungsi untuk memanggil fungsi query ke model database dan menyimpan hasil query tersebut ke dalam sebuah variabel yang telah saya buat. Kemudian, fungsi show_katalog akan mengembalikan return render(request, "katalog.html", context). Data yang ada pada variabel context tersebut akan ikut di-render oleh Django sehingga nantinya saya dapat memunculkan data tersebut pada halaman HTML.
+   Potongan kode di atas berfungsi untuk memanggil fungsi query ke model database dan menyimpan hasil query tersebut ke dalam sebuah variabel yang telah saya buat. Kemudian, fungsi show_katalog akan mengembalikan return render(request, "katalog.html", context). Data yang ada pada variabel context tersebut akan ikut di-render oleh Django sehingga nantinya saya dapat memunculkan data tersebut pada halaman HTML.
 
 3. Setelah membuat sebuah routing, saya melakukan pemetaan terhadap data yang telah ikut di-render pada fungsi yang terdapat di dalam views.py agar dapat memunculkannya di halaman HTML. Saat melakukan pemetaan, saya menggunakan sintaks khusus dari Django, yaitu {{data}}. Kemudian, saya pada bagian Fill me! yang ada di dalam HTML tag <p> seperti ini:
 
@@ -59,7 +59,7 @@ Potongan kode di atas berfungsi untuk memanggil fungsi query ke model database d
    <p>Fill me!</p>
    ```
    
-Saya ubah menjadi {{nama}} dan {{npm}} sesuai variabel “nama” dan “npm” yang telah saya buat sebelumnya di views.py. Kemudian, bagian Fill me! pada HTML akan berubah menjadi seperti ini:
+   Saya ubah menjadi {{nama}} dan {{npm}} sesuai variabel “nama” dan “npm” yang telah saya buat sebelumnya di views.py. Kemudian, bagian Fill me! pada HTML akan berubah menjadi seperti ini:
 
    ```shell
    <h5>Name: </h5>
@@ -69,7 +69,7 @@ Saya ubah menjadi {{nama}} dan {{npm}} sesuai variabel “nama” dan “npm” 
    <p>{{npm}}</p>
    ```
 
-Selanjutnya, saya melakukan iterasi terhadap variabel list_barang yang telah saya ikut render ke dalam HTML untuk menampilkan daftar barang ke dalam tabel. Variabel list_barang merupakan sebuah kontainer yang berisi objek sehingga saya tidak bisa memanggil daftar barang tersebut secara langsung. Oleh karena itu, saya mecoba untuk memanggil nama variabel/atribut spesifik dari objek yang ada di dalam kontainer tersebut untuk memanggil data dari objek tersebut. Berikut adalah potongan kodenya:
+   Selanjutnya, saya melakukan iterasi terhadap variabel list_barang yang telah saya ikut render ke dalam HTML untuk menampilkan daftar barang ke dalam tabel. Variabel list_barang merupakan sebuah kontainer yang berisi objek sehingga saya tidak bisa memanggil daftar barang tersebut secara langsung. Oleh karena itu, saya mecoba untuk memanggil nama variabel/atribut spesifik dari objek yang ada di dalam kontainer tersebut untuk memanggil data dari objek tersebut. Berikut adalah potongan kodenya:
 
    ```shell
    {% comment %} Add the data below this line {% endcomment %}
@@ -85,7 +85,7 @@ Selanjutnya, saya melakukan iterasi terhadap variabel list_barang yang telah say
    {% endfor %}
    ```
 
-Selanjutnya, saya akan mencoba untuk menjalankan proyek Django saya dengan cara:
+   Selanjutnya, saya akan mencoba untuk menjalankan proyek Django saya dengan cara:
    1. Nyalakan terlebih dahulu _virtual environment_ dengan perintah berikut:
 
       ```shell
@@ -113,16 +113,17 @@ Selanjutnya, saya akan mencoba untuk menjalankan proyek Django saya dengan cara:
 
    5. Selanjutnya, bukalah `http://localhost:8000` pada browser untuk melihat apakah aplikasi sudah berjalan dengan benar.
 
-Apabila sudah muncul, maka saya sudah berhasil menyambungkan models dengan views dan template sekaligus mempelajari dasar dari sintaks template dari Django. Kemudian, saya melakukan add, commit, dan push pada cmd saya untuk melihat perubahan yang sudah saya lakukan dan menyimpannya ke dalam repositori GitHub yang telah saya buat.
+   Apabila sudah muncul, maka saya sudah berhasil menyambungkan models dengan views dan template sekaligus mempelajari dasar dari sintaks template dari Django. Kemudian, saya melakukan add, commit, dan push pada cmd saya untuk melihat perubahan yang sudah saya lakukan dan menyimpannya ke dalam repositori GitHub yang telah saya buat.
 
 4. Setelah saya melakukan add, commit, dan push pada cmd, saya membuka tab GitHub Actions di repositori saya dan terlihat bahwa workflow sudah berjalan namun berstatus gagal karena terjadi error yang mengatakan bahwa terdapat beberapa parameter dalam proses deployment yang tidak ditemukan. Hal itu terjadi karena saya belum mengonfigurasi parameter yang dibutuhkan oleh workflow. Oleh karena itu, saya akan melakukan konfigurasi terhadap paramater tersebut agar proses melakukan deploy aplikasi Django ke Heroku dapat berjalan dengan lancar sehingga dapat diakses oleh teman-teman saya melalui internet. Berikut ini langkah-langkah deployment yang saya lakukan, yaitu:
+
    1. Saya melakukan login ke akun Heroku, lalu saya membuat sebuah aplikasi Heroku bernama tugas2hayfa.
    2. Kemudian, saya menyalin API Key yang ada di Account Settings
    3. Lalu, saya membuka konfigurasi repositori GitHub saya dan membuka bagian Secrets untuk GitHub Actions (Settings -> Secrets -> Actions).
    4. Selanjutnya, saya menambahkan dua variabel repository secret baru untuk melakukan deployment. Variabel pertama berisi HEROKU_API_KEY dan variabel kedua berisi HEROKU_APP_NAME. Kemudian, simpan variabel-variabel tersebut.
    5. Lalu, saya membuka tab GitHub Actions dan menjalankan kembali workflow yang gagal.
 
-Setelah itu, workflow yang dijalankan tadi akan berhasil dan status deployment menjadi centang hijau yang artinya sudah berhasil melakukan deployment ke Heroku. Sekarang, aplikasi Django yang telah saya buat sudah dapat diakses di internet melalui link berikut: https://tugas2hayfa.herokuapp.com/katalog/
+   Setelah itu, workflow yang dijalankan tadi akan berhasil dan status deployment menjadi centang hijau yang artinya sudah berhasil melakukan deployment ke Heroku. Sekarang, aplikasi Django yang telah saya buat sudah dapat diakses di internet melalui link berikut: https://tugas2hayfa.herokuapp.com/katalog/
 
 ## Referensi
 
