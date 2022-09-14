@@ -9,7 +9,7 @@
 
 **Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;**
 
-![Untitled - Frame 1](https://user-images.githubusercontent.com/92681187/190172344-b3150783-1370-4783-b093-5bb4be037fee.jpg)
+![Untitled - Frame 1 (1)](https://user-images.githubusercontent.com/92681187/190177111-bec007b6-22b7-4c2f-974c-0f13cb6a42e0.jpg)
 
 ## Virtual Environment
 
