@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1, 
+        "fields":{
+            "watched":"Yes",
+            "title":"The Nun",
+            "rating": "5",
+            "release_date": "20/11/2018",
+            "review": "I gave an 5 for this reason only. In my review of Dark Waters n A Cure for Wellness, I mentioned that cinematography n atmosphere ain't enuff to save a bad film but this film ain't bad. It is well acted n directed n unlike the other two this wasn't boring at all. Compared to the recent pg13 horror films by Warner Bros, this film has a little blood but the only bothering trend continuing in all these films (Insidious, Conjuring, Annabelle 2 n this film) is the lack of kills. Nobody seems to die in these films apart from Annabelle 1. People r thrown away, people r pushed against walls n pillars but they seem to survive. Of course, this film has some offscreen kills n this is one of the reason y its different from the above films. The priest scene with the hat n bag was also similar to The Exorcist. In the future I hope they show some good amount of blood n on screen kills in such films."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Boss Baby",
+            "rating": "5",
+            "release_date": "5/04/2017",
+            "review": "I loved this film, saw it yesterday with my two daughters and all three of us loved and and were talking about it afterwards, even today we are telling their mother who was working about it. The scenes with the older brother were very funny. We watch quite a lot of cartoon style films as my youngest is ten. I would recommend this film to everyone, whether you have children or not. Like most cartoon movies there are subtle wording and scenes that will make adults laugh. Go out see this film, one of the best this year so far."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Hunger Games",
+            "rating": "5",
+            "release_date": "22/03/2012",
+            "review": "The Hunger Games is ought to be the next big thing like Harry Potter, except it already started in a darker and more serious tone than any other young adult fantasy book films. The film did a good job executing its grit and thrills. Decent directing and amazing performances. The filmmakers did a fantastic job bringing Suzanne Collins' book to life. It's not the usual kind of blockbuster that focuses to its loudness. It's a film with moving drama and has its suspense."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"No",
+            "title":"Miracle in Cell No.7",
+            "rating": "5",
+            "release_date": "19/07/2013",
+            "review": "This film will make you laugh. This film will make you cry. Miracle in cell no.7 is a heart-warming story about the relationship between a 6-year old girl and her mentally challenged father whose accused and convicted of a crime he didn't commit. The characters look eccentric yet enchanting thanks to their mesmerizing performance. An immensely satisfying family drama that will leave most of its viewers with a smile on their face & tears in their eyes."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Avengers: Endgame",
+            "rating": "5",
+            "release_date": "24/04/2019",
+            "review": "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up. It's straight up the most epic Marvel film that will probably ever be created. I don't see how Marvel could ever top this, but getting to see these characters all together at least one last time was a reward all on its own."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"Yes",
+            "title":"Despicable Me",
+            "rating": "5",
+            "release_date": "09/07/2010",
+            "review": "I love this movie! It was so adorable, so charming & the writing was absolutely terrific! I love the animation & the characters (including the minions) were all fantastic! A MUST WATCH!"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"Yes",
+            "title":"Turning Red",
+            "rating": "3",
+            "release_date": "01/03/2022",
+            "review": "The animation is really, really good, as expected from Pixar, but they wasted it by making their first film to completely break their mold by having a target audience. Pretty much every one of their movies attempts to be likable by all people of all ages, so I'm not sure why they did this, but the movie is solely targeted at preteen girls and no one else at all, and the plot is entirely focused on explaining puberty. The plot is weird and awkward, and every moment of screentime jumps back and forth between extremely cringey or mind-numbingly cliche. At least it has a consistent plot, so it's still better than Encanto, but not by much."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"Yes",
+            "title":"Pengabdi Setan 2: Communion",
+            "rating": "5",
+            "release_date": "04/08/2022",
+            "review": "Bigger, braver, more brutal, Joko Anwar sets new standard for Indonesian horror visual storytelling with each release of Pengabdi Setan's installment. But as usual with Joko, some parts work really well, others seem to be unfit in a 2-hour movie medium that are sometimes hard to ignore. But other than that, it's an excellent alternative for those suffering from Hollywood fatigue, thanks to all those homages towards 60's - 80's horror movies, the period where Hollywood still knew how to make movies, including horror/thriller."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"Yes",
+            "title":"Top Gun: Maverick",
+            "rating": "5",
+            "release_date": "27/05/2022",
+            "review": "Tom Cruise is brilliant as he reprises the role of Maverick, while Miles Teller comes in and gives a top performance. Jennifer Connelly is another positive, though her role does kinda feel a tiny bit forced in order to have a love interest; given Kelly McGillis' (unexplained) absence."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"Yes",
+            "title":"Hotel Transylvania 2",
+            "rating": "5",
+            "release_date": "25/09/2015",
+            "review": "Overall, the film is an energetic animation compared to its predecessor, heart-warming and certainly a satisfying family goers movie to enjoy."
+        }
+    }
+]
