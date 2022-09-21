@@ -310,19 +310,29 @@ Selanjutnya, saya akan mencoba untuk menjalankan proyek Django saya dengan cara:
       python manage.py runserver
       ```
 
-17. Selanjutnya, bukalah:
+17. Selanjutnya, bukalah URL:
    -  http://localhost:8000/mywatchlist/html
    -  http://localhost:8000/mywatchlist/xml
    -  http://localhost:8000/mywatchlist/json`http://
    
    (sesuaikan dengan path url yang dibuat) pada browser untuk melihat hasilnya.
 
-Apabila sudah muncul, maka saya sudah berhasil menyambungkan models dengan views dan template sekaligus mempelajari dasar dari sintaks template dari Django. Kemudian, saya melakukan add, commit, dan push pada cmd saya untuk melihat perubahan yang sudah saya lakukan dan menyimpannya ke dalam repositori GitHub yang telah saya buat.
+Apabila sudah muncul, maka saya sudah berhasil menyambungkan models dengan views dan template sekaligus mempelajari dasar dari sintaks template dari Django. Lalu, saya juga sudah menambahkan unit test pada tests.py untuk menguji bahwa tiga URL di atas dapat mengembalikan respon HTTP 200 OK. Kemudian, saya melakukan add, commit, dan push pada cmd saya untuk melihat perubahan yang sudah saya lakukan dan menyimpannya ke dalam repositori GitHub yang telah saya buat.
 
 Setelah saya melakukan add, commit, dan push pada cmd, saya membuka tab GitHub Actions di repositori saya dan terlihat bahwa workflow sudah berjalan dan berhasil sehingga akan muncul centang hijau yang artinya sudah berhasil melakukan deployment ke Heroku. Sekarang, aplikasi Django yang telah saya buat sudah dapat diakses di internet melalui link berikut:
 - https://tugashayfa.herokuapp.com/mywatchlist/html/
 - https://tugashayfa.herokuapp.com/mywatchlist/xml/
 - https://tugashayfa.herokuapp.com/mywatchlist/json/
+
+## 🎯 Postman
+`HTML`
+![html](https://user-images.githubusercontent.com/92681187/191579966-9ec77492-d28f-431c-8240-2fa456a42767.png)
+
+`XML`
+![xml](https://user-images.githubusercontent.com/92681187/191580095-a3bfb272-e0f2-4b78-a5b4-d68f0d9d0d8a.png)
+
+`JSON`
+![json](https://user-images.githubusercontent.com/92681187/191580090-1bc2eb11-a6ed-4623-9e8b-60de4e449f63.png)
 
 ## Referensi
 
