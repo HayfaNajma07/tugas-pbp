@@ -311,9 +311,9 @@ Selanjutnya, saya akan mencoba untuk menjalankan proyek Django saya dengan cara:
       ```
 
 17. Selanjutnya, bukalah URL:
-   -  http://localhost:8000/mywatchlist/html
-   -  http://localhost:8000/mywatchlist/xml
-   -  http://localhost:8000/mywatchlist/json`http://
+   -  http://localhost:8000/mywatchlist/html/
+   -  http://localhost:8000/mywatchlist/xml/
+   -  http://localhost:8000/mywatchlist/json/
    
    (sesuaikan dengan path url yang dibuat) pada browser untuk melihat hasilnya.
 
