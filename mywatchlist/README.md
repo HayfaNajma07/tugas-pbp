@@ -36,7 +36,7 @@ Selanjutnya, kita memerlukan data delivery dalam pengimplementasian platform kar
 
 Contohnya adalah adanya komunikasi antara komputer client dengan web server. Komputer client akan melakukan pengiriman menggunakan browser ke web server. Kemudian, web server akan menanggapi permintaan tersebut dengan mengirimkan data yang tersedia di dalam web server sesuai dengan permintaan komputer client.
 
-## Implementasi
+## 🎯 Implementasi
 
 **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.**
 
