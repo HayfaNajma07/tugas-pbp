@@ -9,7 +9,8 @@ def show_mywatchlist(request):
     context = {
         'list_movies': data_barang_mywatchlist,
         'nama': 'Hayfa Najma', 
-        'npm' : '2106653754'
+        'npm' : '2106653754',
+        'text': show_message()
     }
     return render(request, "mywatchlist.html", context)
 
@@ -20,3 +21,12 @@ def show_xml(request):
 def show_json(request):
     data = MyWatchList.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_message():
+    watched = MyWatchList.objects.filter(watched=True).count()
+    not_watched = MyWatchList.objects.filter(watched = False).count()
+    if(watched >= not_watched):
+        return("Selamat, kamu sudah banyak menonton!")
+    else:
+        return("Wah, kamu masih sedikit menonton!")
+

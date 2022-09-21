@@ -7,6 +7,8 @@
 <h3 style="border: 2px solid Tomato;"><Center>Student ID:</Center></h3>
 <h4><Center>{{npm}}</Center></h4>
 
+<h3 style="border: 2px solid Tomato;"><Center>Message:</Center></h3>
+<h4><Center>{{text}}</Center></h4>
 
 <style>
     table, th, td {
@@ -21,18 +23,18 @@
         background-color: #FFF5E4;
     }
     h4 {
-        margin: 2;
+        margin: 5;
         padding: 0;
     }
 </style>
 
-<table syle="width:100%">
+<table>
     <tr>
     <th style="background-color: #FCC5C0;">Title</th>
     <th style="background-color: #FCC5C0;">Release Date</th>
     <th style="width:7%; background-color: #FCC5C0;">Watched</th>
     <th style="width:7%; background-color: #FCC5C0;">Rating</th>
-    <th style="width:50%; background-color: #FCC5C0;">Review</th>
+    <th style="width:60%; background-color: #FCC5C0;">Review</th>
     </tr>
 
     {% for movie in list_movies %}
@@ -41,7 +43,7 @@
             <th>{{movie.release_date}}</th>
             <th>{{movie.watched}}</th>
             <th>{{movie.rating}}</th>
-            <th>{{movie.review}}</th>
+            <th align="justify">{{movie.review}}</th>
         </tr>
     {% endfor %}
 </table>
