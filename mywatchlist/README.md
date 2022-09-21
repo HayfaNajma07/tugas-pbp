@@ -326,12 +326,15 @@ Setelah saya melakukan add, commit, dan push pada cmd, saya membuka tab GitHub A
 
 ## 🎯 Postman
 `HTML`
+
 ![html](https://user-images.githubusercontent.com/92681187/191579966-9ec77492-d28f-431c-8240-2fa456a42767.png)
 
 `XML`
+
 ![xml](https://user-images.githubusercontent.com/92681187/191580095-a3bfb272-e0f2-4b78-a5b4-d68f0d9d0d8a.png)
 
 `JSON`
+
 ![json](https://user-images.githubusercontent.com/92681187/191580090-1bc2eb11-a6ed-4623-9e8b-60de4e449f63.png)
 
 ## Referensi
