@@ -24,7 +24,7 @@
 
 **Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?**
 
-Data delivery di dalam platform adalah sebuah arsitektur yang bersifat fleksibel untuk bertukar informasi agar dapat merancang dan mengembangkan suatu sistem. Di dalam data delivery, terdapat berbagai protokol jaringan yang dapat bertukar data dan informasi. Salah satu protokol yang banyak digunakan adalah HTTP. Protokol HTTP adalah jaringan lapisan aplikasi yang dikembangkan untuk membantu proses transfer antar komputer dan menjaga keamanan data agar terhindar dari pencurian data. HTTP ini cukup fleksibel sehingga sampai saat ini terus dikembangkan dengan penambahan beberapa fitur baru. Data delivery dapat dilakukan melalui HTML, JSON, XML, dan lain-lain. Berikut ini adalah tipikal respon HTTP:
+Data delivery di dalam platform adalah sebuah konsep yang bersifat fleksibel untuk bertukar informasi agar dapat merancang dan mengembangkan suatu sistem. Di dalam data delivery, terdapat berbagai protokol jaringan yang dapat bertukar data dan informasi. Salah satu protokol yang banyak digunakan adalah HTTP. Protokol HTTP adalah jaringan lapisan aplikasi yang dikembangkan untuk membantu proses transfer antar komputer dan menjaga keamanan data agar terhindar dari pencurian data. HTTP ini cukup fleksibel sehingga sampai saat ini terus dikembangkan dengan penambahan beberapa fitur baru. Data delivery dapat dilakukan melalui HTML, JSON, XML, dan lain-lain. Berikut ini adalah tipikal respon HTTP:
 1. Browser meminta halaman HTML. Server mengembalikan file HTML.
 2. Browser meminta lembar gaya. Server mengembalikan file CSS.
 3. Browser meminta gambar JPG. Server mengembalikan file JPG.
