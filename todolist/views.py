@@ -41,7 +41,6 @@ def create_task(request):
             date = str(date.today()),
             title = judul,
             description = deskripsi, 
-            is_finished = False
         )
         if (judul == "" or deskripsi == ""):
             messages.info(request, 'Silahkan masukkan Judul dan Deskripsi Task Anda!')
