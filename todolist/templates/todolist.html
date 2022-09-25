@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1><Center>ToDo List ʕ•́ᴥ•̀ʔっ</Center></h1>
+<h2 style="background-color: pink; border: solid"><Center>Username Pengguna:</Center></h2>  
+<h2><b><Center>{{request.user}}</Center></b></h2>
+<hr width="100%" size="2" align="center" color="black"><br>
+
+<style> 
+    table, th, td {
+        border: 2px solid black;
+        border-collapse:collapse;
+        height: 50px;
+    }
+    td {
+        background-color: #FCC5C0;
+        text-align: center;
+        width: auto;
+        font-size:16px;
+    }
+    th {
+        background-color: #FCC5C0;
+        text-align: center;
+        width: auto;
+        font-size:18px;
+    }
+    body {
+        background-color: #FFF5E4;
+    } 
+    button {
+        height: 40px;
+        width: 270px;
+        border:  solid;
+        display: block;
+        background-color:#BFACE0;
+        font-size:18px;
+        font-weight: bold;
+    }
+    input {
+        background-color: #FFF5E4; 
+        width: 130px; 
+        height: 40px;
+        font-size: 16px;
+    }
+    
+</style>
+
+<Center>
+<table>
+    <tr>
+        <th style="width:10%">Tanggal Pembuatan</th>
+        <th style="width:15%">Judul Task</th>
+        <th style="width:25%">Deskripsi</th>
+    </tr>
+
+    {% for task in list_task %}
+        <tr>
+            <td>{{task.date}}</td>
+            <td>{{task.title}}</td>
+            <td>{{task.description}}</td>
+        </tr>
+    {% endfor %}
+    
+</table>
+</Center>
+<br><br>
+<Center><button><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button></Center><br>
+<Center><button><a href="{% url 'todolist:logout' %}">Logout</a></button></Center>
+
+{% endblock content %}
