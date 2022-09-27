@@ -40,17 +40,19 @@
         background-color: #FFF5E4; 
         width: 130px; 
         height: 40px;
-        font-size: 16px;
+        font-size: 18px;
     }
     
 </style>
 
 <Center>
 <table>
-    <tr>
-        <th style="width:10%">Tanggal Pembuatan</th>
+    <tr style="width:auto;">
+        <th style="width:20%">Tanggal Pembuatan</th>
         <th style="width:15%">Judul Task</th>
         <th style="width:25%">Deskripsi</th>
+        <th style="width:20%">Status</th>
+        <th style="width:20%" colspan="2" >Ubah</th>
     </tr>
 
     {% for task in list_task %}
@@ -58,6 +60,17 @@
             <td>{{task.date}}</td>
             <td>{{task.title}}</td>
             <td>{{task.description}}</td>
+
+            {% if task.is_finished == True %}
+            <td>Selesai</td>
+            {% else %}
+                <td>Belum Selesai</td>
+            {% endif %}   
+            
+            <td><Center><a href="{% url 'todolist:delete_task' task.title %}"><button type="submit" class="btn btn-danger" 
+                style="width: 110px; text-align: center; font-size:15px;">Hapus Task</button></a></Center></td>
+            <td><Center><a href="{% url 'todolist:status_update' task.title %}"><button type="submit" class="btn btn-success ms-1" 
+                style="width: 110px; text-align: center; font-size:15px;">Ubah Status</button></a></Center></td>
         </tr>
     {% endfor %}
     
