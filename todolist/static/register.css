@@ -13,9 +13,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 700px;
-  height: 700px;
-  padding: 30px; 
+  width: 500px;
+  height: 600px;
+  padding: 18px; 
   transform: translate(-50%, -50%);
   background: linear-gradient(#0e5949, #6fc4a9);
   box-sizing: border-box;
@@ -28,12 +28,12 @@ body {
   padding: 0;
   color: #fff;
   text-align: center;
-  font-size: 35px;
+  font-size: 28px;
 }
 
 .register-box .user-box {
   position: relative;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 30px;
   margin-bottom: 20px;
   justify-content: center;      
@@ -47,7 +47,7 @@ body {
   display: flex;
   font-weight: bold;
   color: #040a0a;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-decoration: none;
   text-transform: uppercase;
@@ -63,7 +63,7 @@ body {
   display: flex;
   font-weight: bold;
   color: #040a0a;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
