@@ -1,64 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
 {% block content %}
 
-<style>
-    input{
-        height: 35px;
-        width: 200px;
-        border:  solid;
-        display: block;
-        font-size:20px;
-        font-weight: bold;
-        background-color:#FFD1D1;
-    }
-    body{
-        background-color: #FFF5E4;
-    }
-    h1 {
-        font-size: 40px;
-    }
-    
- </style>
+<link rel="stylesheet" href="{% static 'login.css' %}" />
 
-<Center>
-<div class = "login">
-
-    <br><br>
-    <br><br><h1>🔮 Login 🔮</h1>
-    <form method="POST" action="">
+<div class = "login-box">
+    <h2>Login</h2>
+    <form method="POST">
         {% csrf_token %}
-        <table>
-            <br>
-            <tr>
-                <td><b>Username: </b></td>
-                <td><br><input type="text" name="username" placeholder="Username" class="form-control"><br></td>
-            </tr>
-                    
-            <tr>
-                <td><b>Password: </b></td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><br><input class="btn login_btn" type="submit" value="Login" style="width: 100px"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <h4>
-            {% for message in messages %}
-                <p style="color: red">{{ message }}</p>
-            {% endfor %}
-        </h4>
-    {% endif %}     
         
-    <h4>
-        <b>Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a></b>
-    </h4>
+        <div class="user-box">
+            <input type="text" name="username" required="">
+            <label>Username</label>
+        </div>
 
+        <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
+        </div>
+
+        <button class="submit" type="text">LOGIN</button>
+        <a href="{% url 'todolist:register' %}">REGISTER</a>
+    </form>
 </div>
-</Center>
-
 {% endblock content %}

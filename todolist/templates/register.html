@@ -1,42 +1,29 @@
 {% extends 'base.html' %}
-{% block content %}  
+{% load static %}
 
-<style>
-    input{
-        height: 32px;
-        width:190px;
-        border:  solid;
-        display: block;
-        font-size: 14px;
-    }
-    body{
-        background-color: #FFF5E4;
-    }
- </style>
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
 
-<div class = "login">
-    
-    <h1>Formulir Registrasi</h1>  
+{% block content %} 
 
-        <form method="POST">  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}<br>
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar" style="background-color: #BFACE0"/></td>
-                </tr>
-            </table> 
-        </form>
+<link rel="stylesheet" href="{% static 'register.css' %}" />
 
-    {% if messages %}  
-        <ul>   
-            {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
-    {% endif %}
+<div class="register-box">
+    <h1>Formulir Registrasi</h1>
+    <form method="POST">
+        {% csrf_token %}
 
-</div> 
+        <div class="user-box">
+            <table>{{ form.as_table }}</table>
+        </div>
+
+        <Center><button class="submit" type="text">DAFTAR</button></Center>
+        <Center><button class="submit">
+            <a href="{% url 'todolist:login' %}">Kembali</a>
+        </button></Center>
+
+    </form>
+</div>
 
 {% endblock content %}

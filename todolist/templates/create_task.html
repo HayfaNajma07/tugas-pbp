@@ -1,72 +1,33 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block meta %}
-<title>Registrasi Akun</title>
+<title>create_task</title>
 {% endblock meta %}
 
-{% block content %} 
+{% block content %}
 
-<style>
-    input{
-        height: 40px;
-        width: 270px;
-        border:  solid;
-        display: block;
-        background-color:#FFD1D1;
-        font-size:18px;
-        font-weight: bold;
-    }
-    body{
-        background-color: #FFF5E4;
-    }
-    label{
-        font-size:20px;
-        font-weight: bold;
-    }
-    button {
-        height: 40px;
-        width: 270px;
-        border:  solid;
-        display: block;
-        background-color:#BFACE0;
-        font-size:18px;
-        font-weight: bold;
-    }
-    h2 {
-        color: red;
-    }
- </style>
+<link rel="stylesheet" href="{% static 'create.css' %}" />
 
-<Center>
-<div class = "login">
-
-    <h1><Center>💫 Formulir Tambah Task 💫</Center></h1> 
-    <Center>
-    {% if messages %}  
-    <h2> 
-    {% for message in messages %}  
-        <p>{{ message }}</p>  
-        {% endfor %}  
-    </h2>  
-    {% endif %}
-    </Center>
-    <hr width="100%" size="2" align="center" color="black"><br>
-
-
-    <form method="POST">  
+<div class = "create_task-box">
+    <h1>Formulir Tambah Task</h1> 
+    <form method="POST">
         {% csrf_token %}
-        <table>
-            <label for="judul">Judul Task:</label><br><br>
-            <input type="text" id="judul" name="judul"><br>
-            <label for="deskripsi">Deskripsi Task:</label><br><br>
-            <input type="text" id="deskripsi" name="deskripsi" style="width: 380px"><br><br>
-        </table> 
-        <button type="submit">Tambah</button><br>
+
+        <div class="user-box">
+            <input type="text" name="judul" required="">
+            <label for="judul">Judul Task:</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" name="deskripsi" required="">
+            <label for="deskripsi">Deskripsi Task:</label>
+        </div>
+
+        <Center><button class="submit" type="text">Tambah</button></Center>
+        <Center><button class="submit">
+            <a href="{% url 'todolist:show_todolist' %}">Kembali</a>
+        </button></Center>
     </form> 
-
-    <button type="submit"><a href="{% url 'todolist:show_todolist' %}">Kembali</a></button><br>
-
 </div>
-</Center>
-
 {% endblock content %}

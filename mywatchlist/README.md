@@ -256,7 +256,7 @@ Berikut ini adalah cara saya mengimplementasikan semua checklist yang ada pada T
    ...
    ```
 
-Lalu, saya melakukan mapping terhadap data yang telah ikut di-render dan data yang menampilkan pesan pada fungsi views untuk dapat memunculkannya di halaman HTML. Untuk melakukan mapping tersebut, saya menggunakan sintaks khusus template yang ada pada Django. Berikut ini adalah cara mapping:
+Lalu, saya melakukan mapping terhadap data yang telah ikut di-render dan data yang menampilkan pesan pada fungsi views untuk dapat memunculkannya di halaman HTML. Untuk melakukan mapping tersebut, saya menggunakan sintaks khusus template yang ada pada Django.
 
 10. Saya membuka file HTML yang sudah saya buat sebelumnya pada folder `templates`
 

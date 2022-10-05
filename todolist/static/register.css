@@ -1,0 +1,94 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(#6db474, #65d8b4);
+}
+
+.register-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  padding: 30px; 
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#0e5949, #6fc4a9);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.register-box h1 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+}
+
+.register-box .user-box {
+  position: relative;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  justify-content: center;      
+}
+
+.register-box button {
+  background-color: transparent;
+  border-radius: 100px;
+  padding: 10px 80px;
+  position: relative;
+  display: flex;
+  font-weight: bold;
+  color: #040a0a;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin: 20px;
+  letter-spacing: 4px;
+  justify-content: center;    
+}
+
+.register-box a {
+  position: relative;
+  display: flex;
+  font-weight: bold;
+  color: #040a0a;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin: auto;
+  letter-spacing: 4px;
+  justify-content: center;     
+}
+
+.register-box button:hover {
+  background: #e5e5e5;
+  font-weight: bold;
+  border-radius: 100px;
+  box-shadow: 0 0 5px #e5e5e5,
+              0 0 10px #e5e5e5,
+              0 0 10px #e5e5e5,
+              0 0 10px #e5e5e5;
+}
+
+.register-box a:hover {
+  background: #e5e5e5;
+  font-weight: bold;
+  border-radius: 100px;
+  box-shadow: 0 0 5px #e5e5e5,
+              0 0 10px #e5e5e5,
+              0 0 10px #e5e5e5,
+              0 0 10px #e5e5e5;
+}

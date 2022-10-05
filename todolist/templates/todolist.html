@@ -1,83 +1,56 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>create_task</title>
+{% endblock meta %}
 
 {% block content %}
-<h1><Center>ToDo List ʕ•́ᴥ•̀ʔっ</Center></h1>
-<h2 style="background-color: pink; border: solid"><Center>Username Pengguna:</Center></h2>  
-<h2><b><Center>{{request.user}}</Center></b></h2>
-<hr width="100%" size="2" align="center" color="black"><br>
+<link rel="stylesheet" href="{% static 'todolist.css' %}" />
 
-<style> 
-    table, th, td {
-        border: 2px solid black;
-        border-collapse:collapse;
-        height: 50px;
-    }
-    td {
-        background-color: #FCC5C0;
-        text-align: center;
-        width: auto;
-        font-size:16px;
-    }
-    th {
-        background-color: #FCC5C0;
-        text-align: center;
-        width: auto;
-        font-size:18px;
-    }
-    body {
-        background-color: #FFF5E4;
-    } 
-    button {
-        height: 40px;
-        width: 270px;
-        border:  solid;
-        display: block;
-        background-color:#BFACE0;
-        font-size:18px;
-        font-weight: bold;
-    }
-    input {
-        background-color: #FFF5E4; 
-        width: 130px; 
-        height: 40px;
-        font-size: 18px;
-    }
-    
-</style>
+<body>
+    <nav class="topnav">
+        <a>ToDo List ʕ•́ᴥ•̀ʔっ</a>
+        <a>Username : {{request.user}}</a>
+    </nav>
 
-<Center>
-<table>
-    <tr style="width:auto;">
-        <th style="width:20%">Tanggal Pembuatan</th>
-        <th style="width:15%">Judul Task</th>
-        <th style="width:25%">Deskripsi</th>
-        <th style="width:20%">Status</th>
-        <th style="width:20%" colspan="2" >Ubah</th>
-    </tr>
+    <div class="container">
+        {% for task in list_task %}
+        <div class="card">
+            <div class="content">
+                <div class="headBx">
+                    <h1>🦀 TASK CARD 🦀</h1>
+                </div>
 
-    {% for task in list_task %}
-        <tr>
-            <td>{{task.date}}</td>
-            <td>{{task.title}}</td>
-            <td>{{task.description}}</td>
+                <div class="contentBx">
+                    <h2>Tanggal Pembuatan : {{task.date}}</h2>
+                    <h2>Judul Task : {{task.title}}</h2>
+                    <h2>Deskripsi : {{task.description}}</h2>
+                    <h2>
+                        Status :
+                        {% if task.is_finished == True %}
+                            Selesai
+                        {% else %}
+                            Belum Selesai
+                        {% endif %} 
+                    </h2>
 
-            {% if task.is_finished == True %}
-            <td>Selesai</td>
-            {% else %}
-                <td>Belum Selesai</td>
-            {% endif %}   
-            
-            <td><Center><a href="{% url 'todolist:delete_task' task.title %}"><button type="submit" class="btn btn-danger" 
-                style="width: 110px; text-align: center; font-size:15px;">Hapus Task</button></a></Center></td>
-            <td><Center><a href="{% url 'todolist:status_update' task.title %}"><button type="submit" class="btn btn-success ms-1" 
-                style="width: 110px; text-align: center; font-size:15px;">Ubah Status</button></a></Center></td>
-        </tr>
-    {% endfor %}
-    
-</table>
-</Center>
-<br><br>
-<Center><button><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button></Center><br>
-<Center><button><a href="{% url 'todolist:logout' %}">Logout</a></button></Center>
-
+                    <h2>
+                        Ubah :
+                        <button><a href="{% url 'todolist:delete_task' task.title %}">Hapus Task</a></button>
+                        <button><a href="{% url 'todolist:status_update' task.title %}">Ubah Status</a></button>
+                    </h2>
+                </div>
+                                    
+                <Center>
+                <div class="buttonBx">
+                    <button class="submit"><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button><br>
+                    <button class="submit"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+                </div>
+                </Center>
+            </div>
+        </div>   
+        {% endfor %}
+    </div> 
+</body>
 {% endblock content %}

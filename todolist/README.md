@@ -1,9 +1,10 @@
-# Tugas 4 - Pemrograman Berbasis Platform (PBP)
 **Nama  : Hayfa Najma**
 
 **NPM   : 2106653754**
 
 **Kelas : PBP-F**
+
+# Tugas 4 - Pemrograman Berbasis Platform (PBP)
 
 ### 🎯 Apa kegunaan {% csrf_token %} pada elemen `<form>`? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen `<form>`?
 
@@ -555,8 +556,122 @@ https://tugashayfa.herokuapp.com/admin
    - username: hayfa.najma
    - password: tugaspbp
 
+
+# Tugas 5 - Pemrograman Berbasis Platform (PBP)
+
+### 🎯 Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+#### 🎃 Inline CSS
+Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Inline CSS diigunakan untuk tag HTML tertentu. Atribut <style> digunakan untuk memberikan style ke tag HTML tertentu.Setiap elemen HTML memiliki atribut style, maka pada bagian itu inline CSS ditulis.
+
+Cara ini kurang efisien karena setiap tag HTML yang diberikan harus memiliki style masing-masing. Saat mengatur website dengan menggunakan inline style CSS, Anda akan lebih sulit dalam mengaturnya karena inline CSS hanya digunakan untuk mengubah satu elemen saja.
+
+- Kelebihan:
+Berguna jika Anda ingin menguji dan melihat perubahan
+Berguna untuk perbaikan cepat
+Permintaan HTTP yang lebih kecil
+- Kekurangan:
+Inline CSS harus diterapkan pada setiap elemen
+
+#### 🎃 Internal CSS
+Internal CSS adalah kode CSS yang ditulis di dalam tag <style> dan kode HTML dituliskan di bagian header file HTML. Internal CSS dapat digunakan untuk membuat tampilan pada satu halaman website dan tidak digunakan pada halaman website yang lain.
+
+Cara ini sangat cocok dipakai untuk menciptakan halaman web dengan tampilan yang berbeda. Jadi, Internal CSS ini bisa dipakai untuk menciptakan tampilan yang unik, pada setiap halaman website.
+
+- Kelebihan:
+Perubahan hanya terjadi pada 1 halaman
+Class dan ID bisa digunakan oleh internal stylesheet
+Tidak perlu meng-upload beberapa file karena HTML dan CSS bisa digunakan di file yang sama.
+- Kekurangan:
+Meningkatkan waktu akses website
+Perubahan hanya terjadi pada 1 halaman – tidak efisien bila Anda ingin menggunakan CSS yang sama pada beberapa file.
+
+#### 🎃 External CSS
+External CSS adalah kode CSS yang ditulis terpisah dengan kode HTML. Eksternal CSS ditulis di sebuah file khusus yang berekstensi .css. File eksternal CSS biasanya diletakkan setelah bagian <head> pada halaman.
+
+Cara ini lebih simpel dan nyaman untuk menambahkan CSS ke website Anda karena Anda hanya menghubungkannya ke file .CSS eksternal. Dengan cara tersebut, perubahan apapun yang Anda buat pada file CSS akan tampil pada website Anda secara keseluruhan. 
+
+- Kelebihan:
+Ukuran file HTML menjadi lebih kecil dan strukturnya lebih rapi
+Kecepatan loading menjadi lebih cepat
+File CSS yang sama bisa digunakan di banyak halaman.
+- Kekurangan:
+Halaman akan menjadi berantakan, ketika file CSS gagal dipanggil oleh file HTML. Hal ini terjadi disebabkan karena koneksi internet yang lambat.
+
+### 🎯 Jelaskan tag HTML5 yang kamu ketahui.
+Tag HTML5 adalah perbaikan dari HTML yang diciptakan untuk kebutuhan saat ini seperti dukungan untuk membuat website yang bersifat mobile-friendly. HTML5 memiliki syntax yang lebih sederhana dan mampu menangani error lebih baik dibandingkan HTML. Hal ini dapat mempermudah developer saat membuat struktur halaman website yang kompleks.
+
+Tujuan HTML5 adalah untuk mengikuti perkembangan teknologi informasi dan meningkatkan dukungan terhadap struktur bahasa yang digunakan dalam file multimedia modern. Selain itu, HTML5 juga meningkatkan pengalaman berinternet bagi pengembang dan pengguna. 
+
+### 🎯 Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+1. TAG SELECTOR
+
+Tag Selector disebut juga Type Selector. Tag selector berfungsi untuk mencari pola berupa Tag atau Element didalam file HTML yang akan dimodifikasi.
+
+2. ID SELECTOR
+
+Selector yang berfungsi untuk mencari Tag atau Element HTML berdasarkan atribut id yang dimilikinya. Dalam penulisannya, selector ID ini harus diawali tanda pagar [#] sebelum menuliskan ID yang dimaksud. 
+
+3. CLASS SELECTOR
+
+Selector yang berfungsi untuk mencari Tag atau Element HTML berdasarkan atribut Class yang terdapat didalamnya. Dalam penulisannya, selector Class ini harus diawali tanda titik [.] sebelum menuliskan Class yang dimaksud. Nama-nama class yang digunakan bebas terserah kita. 
+
+4. UNIVERSAL SELECTOR
+
+Selector yang berfungsi mengubah seluruh Tag atau Element yang terdapat didalam suatu file HTML. Untuk menggunakan selector universal kita hanya perlu menuliskan simbol bintang [*] pada kode css yang kita ingin terapkan. 
+
+5. ATTRIBUTE SELECTOR
+
+Selector yang memilik elemen berdasarkan atribut. Selektor ini hampir sama seperti selektor Tag.
+
+6. PSEUDO SELECTOR
+
+Selector yang digunakan untuk memilih elemen semu seperti state pada elemen, elemen before dan after, elemen ganjil, dan sebagainya. Terdapat dua macam pseudo selektor yaitu:
+- Pseudo-class → selektor untuk memilih state pada elemen.
+- Pseudo-element → selektor untuk memilih elemen semu.
+
+
+### 🎯 Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+Berikut ini adalah cara saya mengimplementasikan checklist yang ada pada Tugas 5 - PBP:
+
+1. Saya membuat link untuk eksternal style `login.css` agar `login.html` dapat tersambung ke login.css. Hal ini bertujuan agar halaman html login dapat mengakses style yang ada pada `login.css`.
+
+2. Saya merapihkan class yang ada pada `login.html` dengan membuat dua class "user-box" di dalam class "login-box". Masing-masing class "user-box" ini terdiri dari input dan label untuk username dan password. Lalu, di dalam class "login-box" juga terdapat button login dan href register untuk masuk ke dalam halaman register akun.
+
+3. Lalu, pada `login.css` saya mengkustomisasi templat untuk halaman login dengan semenarik mungkin. Saya mengubah warna tulisan, ukuran, jenis tulisan, warna background, posisi, dan saya juga memberikan hover pada button dan atribut `<a>` href.
+
+4. Kemudian, saya juga merapihkan class yang ada pada `register.html` dengan menambahkan class "user-box" di dalam class "register-box". Saya juga membuat link untuk eksternal style `register.css` agar register.html dapat tersambung ke `register.css`. Hal ini bertujuan agar halaman html register dapat mengakses style yang ada pada `register.css`.
+
+5. Pada `register.css`, saya mengkustomisasi templat untuk halaman register dengan semenarik mungkin. Saya mengubah warna tulisan, ukuran, jenis tulisan, warna background, posisi, dan saya juga memberikan hover pada button dan atribut `<a>` href.
+
+6. Selanjutnya, saya juga merapihkan class yang ada pada `todolist.html` dengan menambahkan class "topnav" untuk bagian navbar atas dan class "container" untuk isi dari tiap task beserta detail dan tombolnya. Pada html ini, saya menaruh for loopnya di sebelum class "card" agar dapat mengkustomisasi halaman utama todo list menggunakan cards. (Satu card mengandung satu task). Di dalam class "card" ini terdapat class "headBx" yang berisi bagian atas card task, class "contentBx" yang berisi detail dan tombol dari isi task, dan class "buttonBx" yang berisi bagian tombol tambah task dan logout.
+
+7. Saya juga membuat link untuk eksternal style `todolist.css` agar todolist.html dapat tersambung ke `todolist.css`. Hal ini bertujuan agar halaman html todolist dapat mengakses style yang ada pada `todolist.css`.
+
+8. Lalu, pada `todolist.css`, saya mengkustomisasi templat untuk halaman todolist dengan semenarik mungkin dengan tiap tasknya berbentuk card. Saya mengubah warna tulisan, ukuran, jenis tulisan, warna background, gambar background, posisi, dan saya juga memberikan hover pada semua button. Saya juga menambahkan efek ketika melakukan hover pada cards di halaman utama todolist.
+
+8. Kemudian, saya juga merapihkan class yang ada pada `create_task.html` dengan menambahkan class "user-box" di dalam class "create_task-box". Saya juga membuat link untuk eksternal style `create.css` agar create_task.html dapat tersambung ke `create.css`. Hal ini bertujuan agar halaman html create_task dapat mengakses style yang ada pada `create.css`.
+
+9. Lalu, saya mengkustomisasi templat halaman create_task dengan semenarik mungkin pada `creat.css`. Saya mengubah warna tulisan, ukuran, jenis tulisan, warna background, gambar background, posisi, dan saya juga memberikan hover pada button dan atribut `<a>` href. Saya juga menambahkan efek ketika melakukan hover pada semua button.
+
+Link Heroku Todolist:
+- https://tugashayfa.herokuapp.com/todolist/
+- https://tugashayfa.herokuapp.com/todolist/login/
+- https://tugashayfa.herokuapp.com/todolist/register/
+- https://tugashayfa.herokuapp.com/todolist/create-task/
+- https://tugashayfa.herokuapp.com/todolist/logout/
+
+Username & Password:
+- Akun 1
+   - username: hayfanajma
+   - password: tugaspbp
+- Akun 2
+   - username: hayfa.najma
+   - password: tugaspbp
+
+
 ## 🎯 Referensi
 
 - https://brightsec.com/blog/csrf-token/
 - https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-3
 - https://portswigger.net/web-security/csrf/tokens
+- https://www.niagahoster.co.id/blog/perbedaan-internal-external-dan-inline-css/
