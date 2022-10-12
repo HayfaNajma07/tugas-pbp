@@ -13,7 +13,7 @@ Tautan dapat diakses di [Deployment Link](https://tugashayfa.herokuapp.com/todol
 ### 🎯 Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.?
 - Asynchronous Programming
     - Sebuah pendekatan pemrograman yang tidak terikat pada input output (I/O) protocol.
-    - Asynchronous programming memungkinkan bagi seorang developer untuk melakukan task codingnya tanpa harus terikat dengan proses lain(independent).
+    - Asynchronous programming memungkinkan bagi seorang developer untuk melakukan task codingnya tanpa harus terikat dengan proses lain (independent).
     - Proses jalannya program bisa dilakukan secara bersamaan tanpa harus menunggu proses antrian. Jadi, ketika terjadi pemanggilan sebuah function asynchronous, baris kode selanjutnya dapat dijalankan tanpa harus menunggu function tersebut selesai.
     - Permintaan asinkron tidak memblokir klien, yaitu browser responsif.
 
@@ -24,9 +24,7 @@ Tautan dapat diakses di [Deployment Link](https://tugashayfa.herokuapp.com/todol
 
 
 ### 🎯  Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma Event-Driven Programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
-Maksud dari Paradigma Event-Driven Programming adalah paradigma pemrograman yang berfokus pada proses terjadinya sebuah event. Alur program pada paradigma ini dijalankan bergantung pada terjadinya sebuah event, misalnya tindakan pengguna (klik mouse, penekanan tombol, dll) sehingga biasanya Event-Driven Programming ini menerapkan konsep asynchronous programming.
-
-Pada `todolist.html`, saya menambahkan on("click") dimana sebuah fungsi akan dijalankan ketika tombol di click. Misalnya pada add task dan delete.
+Maksud dari Paradigma Event-Driven Programming adalah paradigma pemrograman yang berfokus pada proses terjadinya sebuah event. Alur program pada paradigma ini dijalankan bergantung pada terjadinya sebuah event, misalnya tindakan pengguna (klik mouse, penekanan tombol, dll) sehingga biasanya Event-Driven Programming ini menerapkan konsep asynchronous programming. Pada `todolist.html`, saya menambahkan on("click") dimana sebuah fungsi akan dijalankan ketika tombol di click. Misalnya pada tombol add task dan delete.
 
 
 ### 🎯  Jelaskan penerapan asynchronous programming pada AJAX.
