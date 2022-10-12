@@ -621,7 +621,7 @@ Selector yang berfungsi mengubah seluruh Tag atau Element yang terdapat didalam 
 
 5. ATTRIBUTE SELECTOR
 
-Selector yang memilik elemen berdasarkan atribut. Selektor ini hampir sama seperti selektor Tag.
+Selector yang memiliki elemen berdasarkan atribut. Selektor ini hampir sama seperti selektor Tag.
 
 6. PSEUDO SELECTOR
 

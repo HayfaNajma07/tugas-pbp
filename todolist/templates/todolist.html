@@ -1,56 +1,168 @@
-{% extends 'base.html' %}
-{% load static %}
+<style>
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
+    
+    body {
+        background-image: url(https://i.pinimg.com/originals/7d/f2/22/7df2227fc0af47f6c7f6f2e4a0ffde4d.gif);
+    }
+    .navbar {
+        font-size: 30px;
+    }
+    .d-flex h1 {
+        font-size: 55px;
+        color: white;
+        font-weight: bold;
+        margin: auto;
+    }
 
+</style>
+
+{% extends 'base.html' %}
 {% block meta %}
-<title>Todolist</title>
+
+<title>My Todolist</title>
+
 {% endblock meta %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'todolist.css' %}" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid navbar-dark bg-dark">
+            <a class="navbar-brand navbar-dark bg-dark" style="font-size: 30px;">TASK</a>
+            <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
+              </button>
+              <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarSupportedContent">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link navbar-dark bg-dark cursor-pointer" data-bs-toggle="modal" data-bs-target="#modaladd" href="#">Add Task<span class="sr-only navbar-dark bg-dark"></span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link navbar-dark bg-dark" href="{% url 'todolist:logout' %}">Logout</a>
+                    </li>
+                  </ul>
+              </div>
+        </div>
+    </nav>
+</header>
 
 <body>
-    <nav class="topnav">
-        <a>ToDo List ʕ•́ᴥ•̀ʔっ</a>
-        <a>Username : {{request.user}}</a>
-    </nav>
+    <div class="d-flex justify-content-center mt-5 mb-5 text-center">
+        <h1>My To Do List <br>Hello, {{user_name}}!</h1>
+    </div>
 
-    <div class="container">
-        {% for task in list_task %}
-        <div class="card">
-            <div class="content">
-                <div class="headBx">
-                    <h1>🦀 TASK CARD 🦀</h1>
+    <form action="" method="POST" id="tambahTask">  
+        {% csrf_token %}  
+        <table>  
+            <div class="modal fade" id="modaladd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Todolist</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input class="form-control" type="text" id="title" name="title" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+                        <br>
+                        <input class="form-control" type="text" id="description" name="description" placeholder="Description" aria-label="Description" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="createBtn">Create</button>
+                    </div>
+                  </div>
                 </div>
+              </div>
+        </table>
+    </form>
+    
+    <div class="row row-cols-md-3 mx-auto justify-content-center" id="container">
 
-                <div class="contentBx">
-                    <h2>Tanggal Pembuatan : {{task.date}}</h2>
-                    <h2>Judul Task : {{task.title}}</h2>
-                    <h2>Deskripsi : {{task.description}}</h2>
-                    <h2>
-                        Status :
-                        {% if task.is_finished == True %}
-                            Selesai
-                        {% else %}
-                            Belum Selesai
-                        {% endif %} 
-                    </h2>
-
-                    <h2>
-                        Ubah :
-                        <button><a href="{% url 'todolist:delete_task' task.title %}">Hapus Task</a></button>
-                        <button><a href="{% url 'todolist:status_update' task.title %}">Ubah Status</a></button>
-                    </h2>
-                </div>
-                                    
-                <Center>
-                <div class="buttonBx">
-                    <button class="submit"><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button><br>
-                    <button class="submit"><a href="{% url 'todolist:logout' %}">Logout</a></button>
-                </div>
-                </Center>
-            </div>
-        </div>   
-        {% endfor %}
-    </div> 
+    </div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function show_card() {
+        let todolist = "";
+        $.ajax({
+            url: "{% url 'todolist:show_json' %}",
+            type: "GET",
+            dataType: "json",
+            success: function(data){
+                if(data == 0) {
+                    $('#container').html("")
+                }
+                else {
+                    for (i of data){
+                        console.log(data)
+                        todolist += `
+                        <div class="col-auto mb-3">
+                            <div class="card border-primary mx-auto" style="width: 18rem; background-color: rgb(67, 65, 65);">
+                                <div class="card-body text-light">
+                                    <h3 class="card-title">${i.fields.title}</h3>
+                                    <h6 class="card-text">${i.fields.date}</h6>
+                                    <p class="card-text">Description: ${i.fields.description}</p>
+                                    <p class="card-text">Status: ${i.fields.is_finished ? `Selesai`:`Belum Selesai`}</p>
+                                    <a class="btn login_btn btn btn-secondary form-control lg mt-3" href="set_status/${i.pk}">Ubah Status</a>
+                                    <a class="btn login_btn btn btn-danger form-control lg mt-2" onclick="deleteTask(${i.pk})">Hapus</a>
+                                </div>
+                            </div>
+                        </div>`;
+                        $('#container').html(todolist)
+                    }
+                }
+            },
+            error: function(data) {
+                console.log('Error')
+            }
+        })
+    }
+
+    function deleteTask(pk){
+        $.ajax({
+            url: `/todolist/delete/${pk}`,
+            type: "DELETE",
+            success: function(data) {
+                console.log(data)
+                $(`#${pk}`).remove()
+                show_card()
+            }
+        })
+    }
+
+    $(document).on("submit", "#tambahTask", function(e) {
+        e.preventDefault();
+        $.ajax ({
+            url: "{% url 'todolist:add_task_ajax' %}",
+            type: "POST",
+            dataType:"json",
+            data: {
+                title:$("#title").val(),
+                description:$("#description").val(),
+                csrfmiddlewaretoken: "{{ csrf_token }}"
+            },
+            success: function(data) {
+                show_card();
+                const inputs = document.querySelectorAll('#title, #description');
+                inputs.forEach(input => {
+                    input.value = '';
+                });
+            }
+        })
+    })
+
+    $(document).ready(function () {
+        show_card();
+    })
+</script>
+
 {% endblock content %}

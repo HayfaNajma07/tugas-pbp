@@ -1,9 +1,8 @@
-from django.urls import include, path
-from todolist.views import delete_task, status_update, show_todolist
-from todolist.views import register
-from todolist.views import login_user
+from django.urls import path
+from todolist.views import add_task_ajax, add_todolist, delete_task, delete_task_ajax, set_status, show_json, show_todolist
+from todolist.views import register #sesuaikan dengan nama fungsi yang dibuat
+from todolist.views import login_user #sesuaikan dengan nama fungsi yang dibuat
 from todolist.views import logout_user
-from todolist.views import create_task
 
 app_name = 'todolist'
 
@@ -12,7 +11,10 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
-    path('create-task/', create_task, name='create_task'),
-    path('delete_task/<str:name>/', delete_task, name='delete_task'),
-    path('status-update/<str:name>/', status_update, name='status_update'),
+    path('create_task/', add_todolist, name='add_todolist'),
+    path('delete_task/<int:id>/', delete_task, name='delete_task'),
+    path('set_status/<int:id>/', set_status, name='set_status'),
+    path('json/', show_json, name='show_json'),
+    path('add_task_ajax/', add_task_ajax, name='add_task_ajax'),
+    path('delete/<int:id>/', delete_task_ajax, name='delete_task_ajax'),
 ]
