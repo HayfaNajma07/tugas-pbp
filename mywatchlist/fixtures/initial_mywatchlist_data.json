@@ -3,7 +3,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":1, 
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"The Nun",
             "rating": "5",
             "release_date": "20/11/2018",
@@ -14,7 +14,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":2,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"The Boss Baby",
             "rating": "5",
             "release_date": "05/04/2017",
@@ -25,7 +25,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":3,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"The Hunger Games",
             "rating": "5",
             "release_date": "22/03/2012",
@@ -36,7 +36,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":4,
         "fields":{
-            "watched":"No",
+            "watched": false,
             "title":"Miracle in Cell No.7",
             "rating": "5",
             "release_date": "19/07/2013",
@@ -47,7 +47,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":5,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"The Avengers: Endgame",
             "rating": "5",
             "release_date": "24/04/2019",
@@ -58,7 +58,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":6,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"Despicable Me",
             "rating": "5",
             "release_date": "09/07/2010",
@@ -69,7 +69,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":7,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"Turning Red",
             "rating": "3",
             "release_date": "01/03/2022",
@@ -80,7 +80,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":8,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"Pengabdi Setan 2: Communion",
             "rating": "5",
             "release_date": "04/08/2022",
@@ -91,7 +91,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":9,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"Top Gun: Maverick",
             "rating": "5",
             "release_date": "27/05/2022",
@@ -102,7 +102,7 @@
         "model":"mywatchlist.mywatchlist",
         "pk":10,
         "fields":{
-            "watched":"Yes",
+            "watched": true,
             "title":"Hotel Transylvania 2",
             "rating": "5",
             "release_date": "25/09/2015",
